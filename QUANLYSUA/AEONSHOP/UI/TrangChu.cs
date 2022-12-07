@@ -81,12 +81,12 @@ namespace AEONSHOP.UI
             }
 
             // Trường hợp chưa nhập tên khách hàng
-            if (string.IsNullOrEmpty(this.Txt_HoTen.Text))
-            {
-                MessageBox.Show("Tên khách hàng không được bỏ trống", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Txt_HoTen.Focus();
-                return;
-            }
+            //if (string.IsNullOrEmpty(this.Txt_HoTen.Text))
+            //{
+            //    MessageBox.Show("Tên khách hàng không được bỏ trống", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.Txt_HoTen.Focus();
+            //    return;
+            //}
 
             #endregion
 
@@ -96,14 +96,18 @@ namespace AEONSHOP.UI
             // trường hợp chưa tồn tại
             if (null == Infor_KhachHang)
             {
-
+                this.Txt_HoTen.Clear();
             }
             // Trường hợp đã tồn tại trong hệ thống
             else
             {
                 this.Txt_HoTen.Text = Infor_KhachHang.HoTen;
-                this.Dtp_NgaySinh.Text = Infor_KhachHang.NgaySinh.Value;
-                this.Cmb_GioiTinh.SelectedItem
+                this.Dtp_NgaySinh.Text = Infor_KhachHang.NgaySinh.ToString();
+                this.Cmb_GioiTinh.SelectedItem = Infor_KhachHang.NgaySinh;
+                this.Cmb_SoThich.SelectedItem = Infor_KhachHang.Sothich;
+                this.Cmb_SucKhoe.SelectedItem = Infor_KhachHang.CongViec;
+                this.Cmb_CongViec.SelectedItem = Infor_KhachHang.ThuNhap;
+                this.Cmb_ThuNhap.SelectedItem = Infor_KhachHang.ThuNhap;
             }
             #endregion
         }

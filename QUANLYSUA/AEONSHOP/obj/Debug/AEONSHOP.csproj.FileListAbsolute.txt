@@ -15,3 +15,20 @@ D:\PHANDINH\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.CopyComplete
 D:\PHANDINH\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.exe
 D:\PHANDINH\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.pdb
 D:\PHANDINH\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.TrangChu.resources
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.AssemblyReference.cache
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.SuggestedBindingRedirects.cache
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.Properties.Resources.resources
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.DangNhap.resources
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.TrangChu.resources
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.GenerateResource.cache
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.CoreCompileInputs.cache
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.exe
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.pdb
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\AEONSHOP.exe.config
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\AEONSHOP.exe
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\AEONSHOP.pdb
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\EntityFramework.dll
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\EntityFramework.xml
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.CopyComplete
