@@ -20,7 +20,7 @@ namespace AEONSHOP.EF
         [StringLength(10)]
         public string MaHoaDon { get; set; }
 
-        public DateTime? NgayBan { get; set; }
+        public DateTime NgayBan { get; set; }
 
         public int? TrangThai { get; set; }
 

@@ -75,10 +75,6 @@ namespace AEONSHOP.UI
                 }
                 #endregion
             }
-            catch
-            {
-                MessageBox.Show("Thực hiện không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             finally
             {
                 // マウスカーソルを元に戻す

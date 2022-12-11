@@ -85,7 +85,7 @@ namespace AEONSHOP.UI
             // trường hợp chưa tồn tại
             if (null == Infor_KhachHang)
             {
-                MessageBox.Show("Khách hàng mới", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 this.Txt_HoTen.Clear();
                 this.Txt_HoTen.Focus();
                 this.Txt_SoThich.Clear();
@@ -96,6 +96,10 @@ namespace AEONSHOP.UI
                 this.bCheckKhachHang = false; // khách hàng chưa tồn tại
                 this.Btn_Luu.Visible = true;
                 this.Btn_CapNhat.Visible = false;
+
+                // Hiển thị mã hóa đơn
+                this.Txt_MaHoaDon.Text = cm.MaHoaDon();
+                MessageBox.Show("Khách hàng mới", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             // Trường hợp đã tồn tại trong hệ thống
             else
@@ -464,6 +468,7 @@ namespace AEONSHOP.UI
                                       n.MaSanPham,
                                       n.TenSanPham,
                                       m.DonGiaBan,
+                                      m.NgaySuDungConLai,
                                       n.MaLoaiSanPham,
                                       n.Anh
                                   }).Where(n => n.MaLoaiSanPham == sMaLoaiSanPham);
@@ -545,9 +550,10 @@ namespace AEONSHOP.UI
                                       n.MaSanPham,
                                       n.TenSanPham,
                                       m.DonGiaBan,
+                                      m.NgaySuDungConLai,
                                       n.MaLoaiSanPham,
                                       n.Anh
-                                  }).Where(n => n.TenSanPham.Contains(sFilter));
+                                  }).Where(n => n.TenSanPham.Contains(sFilter)).ToList();
 
                 // hiển thị
                 foreach (var item in lst_Producr)
@@ -590,9 +596,10 @@ namespace AEONSHOP.UI
                                     n.MaSanPham,
                                     n.TenSanPham,
                                     m.DonGiaBan,
+                                    m.NgaySuDungConLai,
                                     n.MaLoaiSanPham,
                                     n.Anh
-                                }).Where(n => n.DonGiaBan == Convert.ToDouble(sFilter));
+                                }).ToList().Where(n => n.DonGiaBan == Convert.ToDouble(sFilter));
 
                 // hiển thị
                 foreach (var item in lst_Producr)
@@ -741,17 +748,24 @@ namespace AEONSHOP.UI
 
             int iSoLuongMua = int.Parse(this.Txt_SoLuong.Text.Trim());
 
-            var chiTietHoaDon = db.ChiTietHoaDon.SingleOrDefault(n => n.MaHoaDon == sMaHoaDon & n.MaSanPham == sMaSanPham);
+            ChiTietHoaDon chiTietHoaDon = db.ChiTietHoaDon.SingleOrDefault(n => n.MaHoaDon == sMaHoaDon & n.MaSanPham == sMaSanPham);
 
-            // có thay đổi
-            if (iSoLuongMua != chiTietHoaDon.SoLuongMua && iSoLuongMua != 0)
+            if (null != chiTietHoaDon)
             {
-                this.Btn_CapNhatSoLuong.Enabled = true;
+                // có thay đổi
+                if (iSoLuongMua != chiTietHoaDon.SoLuongMua && iSoLuongMua != 0)
+                {
+                    this.Btn_CapNhatSoLuong.Enabled = true;
+                }
+                else
+                {
+                    this.Btn_CapNhatSoLuong.Enabled = false;
+                }
             }
             else
             {
                 this.Btn_CapNhatSoLuong.Enabled = false;
-            }
+            }    
         }
         #endregion
 
@@ -775,12 +789,18 @@ namespace AEONSHOP.UI
             db.SaveChanges();
 
             // tính tông tiền cho đơn hàng
-            var Chk_SLDonHang = db.ChiTietHoaDon.Where(n => n.MaHoaDon == sMaHoaDon);
-            if (null != Chk_SLDonHang)
+            var Chk_SLDonHang = db.ChiTietHoaDon.Where(n => n.MaHoaDon == sMaHoaDon).ToList();
+            if (0 != Chk_SLDonHang.Count())
             {
-                TongTien = db.ChiTietHoaDon.Where(n => n.MaHoaDon == sMaHoaDon).Sum(n => n.ThanhTien);
+                HoaDon.TongTien = db.ChiTietHoaDon.Where(n => n.MaHoaDon == sMaHoaDon).Sum(n => n.ThanhTien);
             }
-            HoaDon.TongTien = TongTien;
+            else
+            {
+                HoaDon.TongTien = TongTien;
+                this.Txt_TamTinh.Text = "0";
+                this.Txt_GiamGia.Text = "0";
+                this.Txt_TongTien.Text = "0";
+            }
             db.SaveChanges();
 
             // Hiển thị lên listview hóa đơn
@@ -868,7 +888,7 @@ namespace AEONSHOP.UI
                 }
                 #endregion
 
-                KhachHang kh = db.KhachHang.SingleOrDefault(n=>n.SDT == this.Txt_SDT.Text);
+                KhachHang kh = db.KhachHang.SingleOrDefault(n => n.SDT == this.Txt_SDT.Text);
                 kh.SDT = this.Txt_SDT.Text.Trim();
                 kh.HoTen = this.Txt_HoTen.Text.Trim();
                 kh.NgaySinh = this.Dtp_NgaySinh.Value;
@@ -887,5 +907,17 @@ namespace AEONSHOP.UI
             }
         }
         #endregion
+
+        private void SanPhamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLySua fQuanLySua = new QuanLySua();
+            fQuanLySua.ShowDialog();
+        }
+
+        private void QuanLyHoaDonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyHoaDon fQLHD = new QuanLyHoaDon();
+            fQLHD.ShowDialog();
+        }
     }
 }

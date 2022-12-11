@@ -100,7 +100,7 @@ go
 CREATE TABLE HoaDon
 (
 	MaHoaDon varchar(10) primary key,
-	NgayBan Datetime default(getdate()),
+	NgayBan Datetime not null,
 	TrangThai int default(0), -- 0: chưa thanh toán, 1: đã thanh toán
 	TongTien float not null,
 	SDT varchar(12),
@@ -111,15 +111,15 @@ CREATE TABLE HoaDon
 )
 go
 insert into HoaDon (MaHoaDon, NgayBan, TrangThai, TongTien, SDT, TaiKhoanNV)
-values ('HD0001', default, 1, 500000, '0971010281', 'Admin');
+values ('HD0001', '02/02/2022', 1, 500000, '0971010281', 'Admin');
 insert into HoaDon (MaHoaDon, NgayBan, TrangThai, TongTien, SDT, TaiKhoanNV)
-values ('HD0002', default, 1, 700000, '0395241568', 'Admin');
+values ('HD0002', '02/02/2022', 1, 700000, '0395241568', 'Admin');
 insert into HoaDon (MaHoaDon, NgayBan, TrangThai, TongTien, SDT, TaiKhoanNV)
-values ('HD0003', default, 1, 400000, '0325456987', 'Admin');
+values ('HD0003', '02/02/2022', 1, 400000, '0325456987', 'Admin');
 insert into HoaDon (MaHoaDon, NgayBan, TrangThai, TongTien, SDT, TaiKhoanNV)
-values ('HD0004', default, 1, 300000, '0123542874', 'Admin');
+values ('HD0004', '02/02/2022', 1, 300000, '0123542874', 'Admin');
 insert into HoaDon (MaHoaDon, NgayBan, TrangThai, TongTien, SDT, TaiKhoanNV)
-values ('HD0005', default, 1, 200000, '0341251232', 'Admin');
+values ('HD0005', '02/02/2022', 1, 200000, '0341251232', 'Admin');
 go
 CREATE TABLE LoaiSanPham
 (
@@ -236,6 +236,8 @@ insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai,
 values ('2022/02/04', '2023/03/04', 'SP00017', 12, 20, 300000, 400000);
 insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
 values ('2022/02/04', '2023/03/04', 'SP00018', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2023/01/01', '2024/01/01', 'SP0001', 12, 20, 90000, 100000);
 go
 CREATE TABLE ChiTietHoaDon
 (

@@ -78,6 +78,18 @@
     <Compile Include="UI\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\QuanLyHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\QuanLyHoaDon.Designer.cs">
+      <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\QuanLySua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\QuanLySua.Designer.cs">
+      <DependentUpon>QuanLySua.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </Compile>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QuanLyHoaDon.resx">
+      <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\QuanLySua.resx">
+      <DependentUpon>QuanLySua.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
