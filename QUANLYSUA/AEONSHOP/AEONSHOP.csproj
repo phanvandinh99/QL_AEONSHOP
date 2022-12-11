@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMMON\Common.cs" />
     <Compile Include="EF\ChiTietHoaDon.cs" />
     <Compile Include="EF\ChiTietNhapKho.cs" />
     <Compile Include="EF\ChiTietSanPham.cs" />

@@ -24,7 +24,7 @@ namespace AEONSHOP.EF
 
         public int? TrangThai { get; set; }
 
-        public double? TongTien { get; set; }
+        public double TongTien { get; set; }
 
         [StringLength(12)]
         public string SDT { get; set; }

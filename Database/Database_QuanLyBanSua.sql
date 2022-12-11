@@ -26,7 +26,7 @@ insert into ThuNhap (MaThuNhap, TenThuNhap, SoTien) values ('TN0001', N'Dưới 
 insert into ThuNhap (MaThuNhap, TenThuNhap, SoTien) values ('TN0002', N'Từ 6.000.000 đến dưới 13.000.000', '6000000-13000000');
 insert into ThuNhap (MaThuNhap, TenThuNhap, SoTien) values ('TN0003', N'Từ 13.000.000 đến dưới 50.000.000', '13000000-50000000');
 insert into ThuNhap (MaThuNhap, TenThuNhap, SoTien) values ('TN0004', N'Trên 50.000.000', '50.000.000-0');
-insert into ThuNhap (MaThuNhap, TenThuNhap, SoTien) values ('TN0005', N'Không có thu nhập(/Không thu thập được)', '0-0');
+insert into ThuNhap (MaThuNhap, TenThuNhap, SoTien) values ('TN0005', N'Không có thu nhập(Thất nghiệp)', '0-0');
 go
 CREATE TABLE TinhTrangSucKhoe
 (
@@ -102,7 +102,7 @@ CREATE TABLE HoaDon
 	MaHoaDon varchar(10) primary key,
 	NgayBan Datetime default(getdate()),
 	TrangThai int default(0), -- 0: chưa thanh toán, 1: đã thanh toán
-	TongTien float null,
+	TongTien float not null,
 	SDT varchar(12),
 	TaiKhoanNV varchar(50),
 
@@ -128,7 +128,8 @@ CREATE TABLE LoaiSanPham
 	SoLuong int null,
 )
 go
-insert into LoaiSanPham (MaLoaiSanPham, TenLoaiSanPham, SoLuong) values ('LSP001', N'Sữa Cho Mẹ Bầu Và Sau Sinh', 10);
+insert into LoaiSanPham (MaLoaiSanPham, TenLoaiSanPham, SoLuong) values ('ALL', N'Tất Cả', 18);
+insert into LoaiSanPham (MaLoaiSanPham, TenLoaiSanPham, SoLuong) values ('LSP001', N'Sữa Bột Công Thức', 10);
 insert into LoaiSanPham (MaLoaiSanPham, TenLoaiSanPham, SoLuong) values ('LSP002', N'Sữa Cho Bé 0-24 Tháng', 10);
 insert into LoaiSanPham (MaLoaiSanPham, TenLoaiSanPham, SoLuong) values ('LSP003', N'Sữa Cho Bé Trên 24 Tháng', 10);
 insert into LoaiSanPham (MaLoaiSanPham, TenLoaiSanPham, SoLuong) values ('LSP004', N'Sữa Cho Mọi Lứa Tuổi', 10);
@@ -147,25 +148,43 @@ CREATE TABLE SanPham
 )
 go
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0001', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0001', N'Sữa dê Bubs Goat số 3 800g', 10, N'bood800.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0002', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0002', N'Sữa Bubs Full Cream 1kg', 10, N'boodcream.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP002');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0003', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0003', N'Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)', 10, N'suagrowplus.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP003');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0004', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0004', N'Bellamy Organic Pregnancy Formula', 10, N'bellamy.jpg', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP004');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0005', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0005', N'Sữa Similac Total Protection 4 900g', 10, N'sua-similac-total-protection-4-5-hmo-900g-2-6-tuoi.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP005');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0006', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0006', N'Sữa dê Kabrita Số 3 800g', 10, N'sua-de-kabrita-so-3-800g-tu-2-tuoi.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0007', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0007', N'Sữa Nan Optipro 2 900g, HMO (6-12 tháng)', 10, N'nestle-nan-optipro-2-6-12-thang-900g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP002');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0008', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0008', N'Sữa Enfagrow A2 NeuroPro số 3 800g', 10, N'enfagrow-aii-neuropro-3-1-6-tuoi-800g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP003');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP0009', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP0009', N'Sữa Vinamilk ColosGold số 3 800g', 10, N'sua-vinamilk-colosgold-so-3-800g-2-6-tuoi.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP004');
 insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
-values ('SP00010', N'Sữa Bầu Enfamama A+ Hương Socola Hộp 400g', 10, default, N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+values ('SP00010', N'Vinamilk Kenko Haru hộp 350g', 10, N'sb-vnm-kenko-haru-ht350g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP005');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00011', N'Sữa Vinamilk Organic Gold 4 850g', 10, N'sb-vnm-kenko-haru-ht350g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00012', N'Sữa Vinamilk Yoko Gold 2 350g', 10, N'vinamilk-yoko-gold-2-1-2-tuoi-350g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP002');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00013', N'Sữa Vinamilk ColosGold số 2 350g', 10, N'sua-vinamilk-colosgold-so-2-800g-1-2-tuoi.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00014', N'Sữa Frisolac Gold số 2 850g', 10, N'frisolac-gold-2-6-12-thang-tuoi-850gr.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP002');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00015', N'Sữa Hikid vị Vani 600', 10, N'sua-hikid-vani-600g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP003');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00016', N'Sữa Blackmores Số 2 900g', 10, N'blackmores-step-2-follow-on-formula.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00017', N'Sữa Enfamil NeuroPro Infant Formula', 10, N'sua-enfamil-neuropro-infant-formula-890g-0-12-thang.jpg', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00018', N'Nước rửa bình sữa AGA-AE', 10, N'nuoc-rua-binh-sua-aga-ae-huong-cam-tui-500ml.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP002');
+insert into SanPham (MaSanPham, TenSanPham, DaBan, Anh, MoTa, MaLoaiSanPham)
+values ('SP00019', N'Vinamilk Kenko Haru hộp 350g', 10, N'sb-vnm-kenko-haru-ht350g.png', N'Lưu ý: Bao bì và màu sản phẩm có thể thay đổi giữa các đợt nhập hàng', 'LSP001');
 go
 CREATE TABLE ChiTietSanPham
 (
@@ -182,29 +201,61 @@ CREATE TABLE ChiTietSanPham
 )
 go
 insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
-values ('2022/02/04', '2022/03/04', 'SP0001', 15, 20, 150000, 160000);
+values ('2022/02/04', '2023/03/04', 'SP0001', 12, 20, 90000, 100000);
 insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
-values ('2022/02/04', '2022/03/04', 'SP0002', 15, 20, 150000, 160000);
+values ('2022/02/04', '2023/03/04', 'SP0002', 12, 20, 200000, 200000);
 insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
-values ('2022/02/04', '2022/03/04', 'SP0003', 15, 20, 150000, 160000);
+values ('2022/02/04', '2023/03/04', 'SP0003', 12, 20, 300000, 300000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP0004', 12, 20, 90000, 250000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP0005', 12, 20, 200000, 500000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP0006', 12, 20, 300000, 50000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP0007', 12, 20, 300000, 300000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP0008', 12, 20, 300000, 200000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP0009', 12, 20, 300000, 350000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00010', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00011', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00012', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00013', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00014', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00015', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00016', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00017', 12, 20, 300000, 400000);
+insert into ChiTietSanPham (NgaySanXuat, HanSuDung, MaSanPham, NgaySuDungConLai, SoLuongHienCon, DonGiaNhap, DonGiaBan)
+values ('2022/02/04', '2023/03/04', 'SP00018', 12, 20, 300000, 400000);
 go
 CREATE TABLE ChiTietHoaDon
 (
 	MaHoaDon varchar(10),
 	MaSanPham varchar(10),
 	primary key (MaHoaDon, MaSanPham),
-	SoLuongMua int default(1),
-	ThanhTien float null,
+	HanSuDung int not null,
+	SoLuongMua int not null,
+	GiaBan float not null,
+	ThanhTien float not null,
 
 	foreign key(MaHoaDon) references HoaDon(MaHoaDon),
 	foreign key(MaSanPham) references SanPham(MaSanPham),
 )
 go
-insert into ChiTietHoaDon (MaHoaDon, MaSanPham, SoLuongMua, ThanhTien) values ('HD0001', 'SP0001', 1, 200000);
-insert into ChiTietHoaDon (MaHoaDon, MaSanPham, SoLuongMua, ThanhTien) values ('HD0002', 'SP0002', 1, 300000);
-insert into ChiTietHoaDon (MaHoaDon, MaSanPham, SoLuongMua, ThanhTien) values ('HD0003', 'SP0003', 1, 400000);
-insert into ChiTietHoaDon (MaHoaDon, MaSanPham, SoLuongMua, ThanhTien) values ('HD0004', 'SP0004', 1, 500000);
-insert into ChiTietHoaDon (MaHoaDon, MaSanPham, SoLuongMua, ThanhTien) values ('HD0005', 'SP0005', 1, 600000);
+insert into ChiTietHoaDon (MaHoaDon, MaSanPham, HanSuDung, SoLuongMua, GiaBan, ThanhTien) values ('HD0001', 'SP0001', 12, 1, 100000,200000);
+insert into ChiTietHoaDon (MaHoaDon, MaSanPham, HanSuDung, SoLuongMua, GiaBan, ThanhTien) values ('HD0002', 'SP0002', 12, 1, 100000,300000);
+insert into ChiTietHoaDon (MaHoaDon, MaSanPham, HanSuDung, SoLuongMua, GiaBan, ThanhTien) values ('HD0003', 'SP0003', 12, 1, 100000,400000);
+insert into ChiTietHoaDon (MaHoaDon, MaSanPham, HanSuDung, SoLuongMua, GiaBan, ThanhTien) values ('HD0004', 'SP0004', 12, 1, 100000,500000);
+insert into ChiTietHoaDon (MaHoaDon, MaSanPham, HanSuDung, SoLuongMua, GiaBan, ThanhTien) values ('HD0005', 'SP0005', 12, 1, 100000,600000);
 go
 CREATE TABLE NhapKho
 (
