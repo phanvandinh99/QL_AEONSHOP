@@ -90,6 +90,12 @@
     <Compile Include="UI\QuanLySanPham.Designer.cs">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ThemMoiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ThemMoiSanPham.Designer.cs">
+      <DependentUpon>ThemMoiSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QuanLySanPham.resx">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ThemMoiSanPham.resx">
+      <DependentUpon>ThemMoiSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>

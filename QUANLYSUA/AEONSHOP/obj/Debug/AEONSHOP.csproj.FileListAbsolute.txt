@@ -34,3 +34,4 @@ C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEON
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.CopyComplete
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.exe
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.pdb
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.ThemMoiSanPham.resources

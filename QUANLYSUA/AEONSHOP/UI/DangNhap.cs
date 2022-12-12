@@ -69,6 +69,14 @@ namespace AEONSHOP.UI
                 }
                 else
                 {
+                    // cập nhật hạn sử dụng
+                    var HanSuDungSanPham = db.ChiTietSanPham.ToList();
+                    foreach(var item in HanSuDungSanPham)
+                    {
+                        item.NgaySuDungConLai = (item.HanSuDung - DateTime.Now).Days;
+                    }
+                    db.SaveChanges();
+
                     this.Hide();
                     TrangChu frm_TrangChu = new TrangChu();
                     frm_TrangChu.ShowDialog();

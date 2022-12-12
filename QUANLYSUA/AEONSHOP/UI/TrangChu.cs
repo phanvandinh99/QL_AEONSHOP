@@ -267,7 +267,7 @@ namespace AEONSHOP.UI
                                       m.NgaySuDungConLai,
                                       n.MaLoaiSanPham,
                                       n.Anh
-                                  }).Where(n => n.TenSanPham.Contains(sFilter)).ToList();
+                                  }).Where(n => n.TenSanPham.Contains(sFilter) & n.NgaySuDungConLai > 0).ToList();
 
                 // hiển thị
                 foreach (var item in lst_Producr)
@@ -313,7 +313,7 @@ namespace AEONSHOP.UI
                                     m.NgaySuDungConLai,
                                     n.MaLoaiSanPham,
                                     n.Anh
-                                }).ToList().Where(n => n.DonGiaBan == Convert.ToDouble(sFilter));
+                                }).ToList().Where(n => n.DonGiaBan == Convert.ToDouble(sFilter) & n.NgaySuDungConLai > 0);
 
                 // hiển thị
                 foreach (var item in lst_Producr)
@@ -812,7 +812,7 @@ namespace AEONSHOP.UI
                                                       m.DonGiaBan,
                                                       m.NgaySuDungConLai,
                                                       n.Anh
-                                                  });
+                                                  }).Where(n => n.NgaySuDungConLai > 0);
 
                 // Hiển thị
                 foreach (var item in lst_Producr)
@@ -835,7 +835,7 @@ namespace AEONSHOP.UI
                     // Hiển thị tên sản phẩm và giá
                     Label lbl_Product_Name = new Label() { Width = 120, Height = 50 };
                     lbl_Product_Name.Font = new Font(FontFamily.GenericSansSerif, 9.0F, FontStyle.Regular);
-                    lbl_Product_Name.Text = item.TenSanPham + "\nHSD: " + item.NgaySuDungConLai + " Tháng.\nGiá: " + item.DonGiaBan.ToString("#,###", cul.NumberFormat) + " vnđ.";
+                    lbl_Product_Name.Text = item.TenSanPham + "\nHSD: " + item.NgaySuDungConLai + " Ngày.\nGiá: " + item.DonGiaBan.ToString("#,###", cul.NumberFormat) + " vnđ.";
 
                     lbl_Product_Name.Dock = DockStyle.Fill;
                     lbl_Product_Name.TextAlign = ContentAlignment.MiddleLeft;
@@ -858,7 +858,7 @@ namespace AEONSHOP.UI
                                       m.NgaySuDungConLai,
                                       n.MaLoaiSanPham,
                                       n.Anh
-                                  }).Where(n => n.MaLoaiSanPham == sMaLoaiSanPham);
+                                  }).Where(n => n.MaLoaiSanPham == sMaLoaiSanPham & n.NgaySuDungConLai > 0);
 
                 // hiển thị
                 foreach (var item in lst_Producr)
