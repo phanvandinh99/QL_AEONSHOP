@@ -101,11 +101,12 @@ namespace AEONSHOP.UI
 
         private void lsvHoaDon_MouseClick(object sender, MouseEventArgs e)
         {
-            string sSDT = lsvHoaDon.SelectedItems[2].SubItems[0].Text;
+            string sSDT = lsvHoaDon.SelectedItems[0].SubItems[2].Text;
 
             var Infor_KhachHang = db.KhachHang.SingleOrDefault(n => n.SDT == sSDT);
 
             // Hiển thị leen textbox
+            this.Txt_SDT.Text = Infor_KhachHang.SDT;
             this.Txt_HoTen.Text = Infor_KhachHang.HoTen;
             this.Dtp_NgaySinh.Text = Infor_KhachHang.NgaySinh.ToString();
             this.Cmb_GioiTinh.Text = Infor_KhachHang.GioiTinh;
