@@ -1,6 +1,6 @@
 ﻿namespace AEONSHOP.UI
 {
-    partial class QuanLySanPham
+    partial class SuaQuaHan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Lbl_Ngay_Hien_Tai = new System.Windows.Forms.Label();
+            this.Btn_Clear = new System.Windows.Forms.Button();
+            this.Btn_Xoa = new System.Windows.Forms.Button();
+            this.Btn_ThemMoi = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Txt_GiaBanCu = new System.Windows.Forms.TextBox();
+            this.Lbl_HanSuDung = new System.Windows.Forms.Label();
+            this.Txt_TenSanPham = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Cmb_Filter = new System.Windows.Forms.ComboBox();
             this.Btn_Search = new System.Windows.Forms.Button();
@@ -38,12 +47,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Cmb_DanhMuc = new System.Windows.Forms.ComboBox();
             this.Lbl_DanhMuc = new System.Windows.Forms.Label();
-            this.FLP_Product = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Btn_CapNhatGiaBan = new System.Windows.Forms.Button();
+            this.TxtGiaBan = new System.Windows.Forms.Label();
+            this.Txt_GiaBanMoi = new System.Windows.Forms.TextBox();
             this.Grb_ThongTinSanPham = new System.Windows.Forms.GroupBox();
             this.Pal_ = new System.Windows.Forms.Panel();
-            this.Btn_Clear = new System.Windows.Forms.Button();
-            this.Btn_Xoa = new System.Windows.Forms.Button();
-            this.Btn_ThemMoi = new System.Windows.Forms.Button();
             this.Btn_CapNhat = new System.Windows.Forms.Button();
             this.Txt_MoTa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,17 +63,11 @@
             this.Cmb_LoaiSanPham = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Lbl_NgaySinh = new System.Windows.Forms.Label();
-            this.Txt_TenSanPham = new System.Windows.Forms.TextBox();
             this.Txt_MaSanPham = new System.Windows.Forms.TextBox();
             this.Lbl_SDT = new System.Windows.Forms.Label();
-            this.Grb_ChiTietSanPham = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Txt_GiaBanCu = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Btn_CapNhatGiaBan = new System.Windows.Forms.Button();
-            this.TxtGiaBan = new System.Windows.Forms.Label();
-            this.Txt_GiaBanMoi = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Lbl_NgaySanXuat = new System.Windows.Forms.Label();
+            this.FLP_Product = new System.Windows.Forms.FlowLayoutPanel();
             this.lsvSanPham = new System.Windows.Forms.ListView();
             this.NgaySanXuat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.HanSuDung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,21 +76,107 @@
             this.GiaNhap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GiaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Lai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Lbl_Ngay_Hien_Tai = new System.Windows.Forms.Label();
             this.Lbl_NgayHeThong = new System.Windows.Forms.Label();
-            this.Lbl_NgaySanXuat = new System.Windows.Forms.Label();
-            this.Lbl_HanSuDung = new System.Windows.Forms.Label();
+            this.Grb_ChiTietSanPham = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.Grb_ThongTinSanPham.SuspendLayout();
             this.Pal_.SuspendLayout();
             this.Grb_ChiTietSanPham.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Lbl_Ngay_Hien_Tai
+            // 
+            this.Lbl_Ngay_Hien_Tai.AutoSize = true;
+            this.Lbl_Ngay_Hien_Tai.Location = new System.Drawing.Point(729, 678);
+            this.Lbl_Ngay_Hien_Tai.Name = "Lbl_Ngay_Hien_Tai";
+            this.Lbl_Ngay_Hien_Tai.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_Ngay_Hien_Tai.TabIndex = 59;
+            this.Lbl_Ngay_Hien_Tai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Btn_Clear
+            // 
+            this.Btn_Clear.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Clear.Location = new System.Drawing.Point(12, 103);
+            this.Btn_Clear.Name = "Btn_Clear";
+            this.Btn_Clear.Size = new System.Drawing.Size(76, 26);
+            this.Btn_Clear.TabIndex = 22;
+            this.Btn_Clear.Text = "Clear";
+            this.Btn_Clear.UseVisualStyleBackColor = true;
+            this.Btn_Clear.Click += new System.EventHandler(this.Btn_Clear_Click);
+            // 
+            // Btn_Xoa
+            // 
+            this.Btn_Xoa.ForeColor = System.Drawing.Color.Red;
+            this.Btn_Xoa.Location = new System.Drawing.Point(12, 71);
+            this.Btn_Xoa.Name = "Btn_Xoa";
+            this.Btn_Xoa.Size = new System.Drawing.Size(76, 26);
+            this.Btn_Xoa.TabIndex = 10;
+            this.Btn_Xoa.Text = "Xóa";
+            this.Btn_Xoa.UseVisualStyleBackColor = true;
+            this.Btn_Xoa.Click += new System.EventHandler(this.Btn_Xoa_Click);
+            // 
+            // Btn_ThemMoi
+            // 
+            this.Btn_ThemMoi.ForeColor = System.Drawing.Color.Black;
+            this.Btn_ThemMoi.Location = new System.Drawing.Point(12, 39);
+            this.Btn_ThemMoi.Name = "Btn_ThemMoi";
+            this.Btn_ThemMoi.Size = new System.Drawing.Size(76, 26);
+            this.Btn_ThemMoi.TabIndex = 21;
+            this.Btn_ThemMoi.Text = "Thêm Mới";
+            this.Btn_ThemMoi.UseVisualStyleBackColor = true;
+            this.Btn_ThemMoi.Click += new System.EventHandler(this.Btn_ThemMoi_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(808, 686);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(398, 26);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "* Note: HSD (Ngày sủ dụn g còn lại) = Hạn sử dụng - Ngày hiện tại (đơn vị là ngày" +
+    ")\r\n             Trường hợp ngày là số âm => sản phẩm đã hết hạn.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(264, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 16);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "SỮA QUÁ HẠN";
+            // 
+            // Txt_GiaBanCu
+            // 
+            this.Txt_GiaBanCu.Location = new System.Drawing.Point(71, 9);
+            this.Txt_GiaBanCu.MaxLength = 10;
+            this.Txt_GiaBanCu.Name = "Txt_GiaBanCu";
+            this.Txt_GiaBanCu.ReadOnly = true;
+            this.Txt_GiaBanCu.Size = new System.Drawing.Size(102, 20);
+            this.Txt_GiaBanCu.TabIndex = 36;
+            // 
+            // Lbl_HanSuDung
+            // 
+            this.Lbl_HanSuDung.AutoSize = true;
+            this.Lbl_HanSuDung.Location = new System.Drawing.Point(1035, 624);
+            this.Lbl_HanSuDung.Name = "Lbl_HanSuDung";
+            this.Lbl_HanSuDung.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_HanSuDung.TabIndex = 62;
+            this.Lbl_HanSuDung.Visible = false;
+            // 
+            // Txt_TenSanPham
+            // 
+            this.Txt_TenSanPham.Location = new System.Drawing.Point(94, 23);
+            this.Txt_TenSanPham.Name = "Txt_TenSanPham";
+            this.Txt_TenSanPham.Size = new System.Drawing.Size(302, 20);
+            this.Txt_TenSanPham.TabIndex = 2;
             // 
             // panel2
             // 
@@ -93,10 +184,10 @@
             this.panel2.Controls.Add(this.Cmb_Filter);
             this.panel2.Controls.Add(this.Btn_Search);
             this.panel2.Controls.Add(this.Txt_Search);
-            this.panel2.Location = new System.Drawing.Point(316, 22);
+            this.panel2.Location = new System.Drawing.Point(320, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(324, 38);
-            this.panel2.TabIndex = 27;
+            this.panel2.TabIndex = 52;
             // 
             // Cmb_Filter
             // 
@@ -131,10 +222,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.Cmb_DanhMuc);
             this.panel1.Controls.Add(this.Lbl_DanhMuc);
-            this.panel1.Location = new System.Drawing.Point(2, 22);
+            this.panel1.Location = new System.Drawing.Point(6, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(308, 38);
-            this.panel1.TabIndex = 26;
+            this.panel1.TabIndex = 51;
             // 
             // panel3
             // 
@@ -154,6 +245,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(216, 21);
             this.comboBox1.TabIndex = 21;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.Cmb_DanhMuc_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -173,7 +265,6 @@
             this.Cmb_DanhMuc.Name = "Cmb_DanhMuc";
             this.Cmb_DanhMuc.Size = new System.Drawing.Size(216, 21);
             this.Cmb_DanhMuc.TabIndex = 21;
-            this.Cmb_DanhMuc.SelectedIndexChanged += new System.EventHandler(this.Cmb_DanhMuc_SelectedIndexChanged);
             // 
             // Lbl_DanhMuc
             // 
@@ -185,14 +276,66 @@
             this.Lbl_DanhMuc.Text = "Danh mục";
             this.Lbl_DanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // FLP_Product
+            // panel4
             // 
-            this.FLP_Product.AutoScroll = true;
-            this.FLP_Product.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.FLP_Product.Location = new System.Drawing.Point(2, 64);
-            this.FLP_Product.Name = "FLP_Product";
-            this.FLP_Product.Size = new System.Drawing.Size(638, 644);
-            this.FLP_Product.TabIndex = 28;
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.Txt_GiaBanCu);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.Btn_CapNhatGiaBan);
+            this.panel4.Controls.Add(this.TxtGiaBan);
+            this.panel4.Controls.Add(this.Txt_GiaBanMoi);
+            this.panel4.Location = new System.Drawing.Point(70, 267);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(472, 41);
+            this.panel4.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Giá bán cũ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 34;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Btn_CapNhatGiaBan
+            // 
+            this.Btn_CapNhatGiaBan.ForeColor = System.Drawing.Color.Black;
+            this.Btn_CapNhatGiaBan.Location = new System.Drawing.Point(365, 6);
+            this.Btn_CapNhatGiaBan.Name = "Btn_CapNhatGiaBan";
+            this.Btn_CapNhatGiaBan.Size = new System.Drawing.Size(102, 26);
+            this.Btn_CapNhatGiaBan.TabIndex = 23;
+            this.Btn_CapNhatGiaBan.Text = "Cập Nhật Giá Bán";
+            this.Btn_CapNhatGiaBan.UseVisualStyleBackColor = true;
+            this.Btn_CapNhatGiaBan.Click += new System.EventHandler(this.Btn_CapNhatGiaBan_Click);
+            // 
+            // TxtGiaBan
+            // 
+            this.TxtGiaBan.AutoSize = true;
+            this.TxtGiaBan.Location = new System.Drawing.Point(185, 13);
+            this.TxtGiaBan.Name = "TxtGiaBan";
+            this.TxtGiaBan.Size = new System.Drawing.Size(63, 13);
+            this.TxtGiaBan.TabIndex = 32;
+            this.TxtGiaBan.Text = "Giá bán mới";
+            this.TxtGiaBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Txt_GiaBanMoi
+            // 
+            this.Txt_GiaBanMoi.Location = new System.Drawing.Point(250, 9);
+            this.Txt_GiaBanMoi.MaxLength = 10;
+            this.Txt_GiaBanMoi.Name = "Txt_GiaBanMoi";
+            this.Txt_GiaBanMoi.Size = new System.Drawing.Size(102, 20);
+            this.Txt_GiaBanMoi.TabIndex = 33;
             // 
             // Grb_ThongTinSanPham
             // 
@@ -207,10 +350,10 @@
             this.Grb_ThongTinSanPham.Controls.Add(this.Txt_TenSanPham);
             this.Grb_ThongTinSanPham.Controls.Add(this.Txt_MaSanPham);
             this.Grb_ThongTinSanPham.Controls.Add(this.Lbl_SDT);
-            this.Grb_ThongTinSanPham.Location = new System.Drawing.Point(650, 22);
+            this.Grb_ThongTinSanPham.Location = new System.Drawing.Point(654, 26);
             this.Grb_ThongTinSanPham.Name = "Grb_ThongTinSanPham";
             this.Grb_ThongTinSanPham.Size = new System.Drawing.Size(549, 265);
-            this.Grb_ThongTinSanPham.TabIndex = 29;
+            this.Grb_ThongTinSanPham.TabIndex = 54;
             this.Grb_ThongTinSanPham.TabStop = false;
             this.Grb_ThongTinSanPham.Text = "Thông Tin Sản Phẩm";
             // 
@@ -225,39 +368,6 @@
             this.Pal_.Name = "Pal_";
             this.Pal_.Size = new System.Drawing.Size(102, 138);
             this.Pal_.TabIndex = 30;
-            // 
-            // Btn_Clear
-            // 
-            this.Btn_Clear.ForeColor = System.Drawing.Color.Black;
-            this.Btn_Clear.Location = new System.Drawing.Point(12, 103);
-            this.Btn_Clear.Name = "Btn_Clear";
-            this.Btn_Clear.Size = new System.Drawing.Size(76, 26);
-            this.Btn_Clear.TabIndex = 22;
-            this.Btn_Clear.Text = "Clear";
-            this.Btn_Clear.UseVisualStyleBackColor = true;
-            this.Btn_Clear.Click += new System.EventHandler(this.Btn_Clear_Click);
-            // 
-            // Btn_Xoa
-            // 
-            this.Btn_Xoa.ForeColor = System.Drawing.Color.Red;
-            this.Btn_Xoa.Location = new System.Drawing.Point(12, 71);
-            this.Btn_Xoa.Name = "Btn_Xoa";
-            this.Btn_Xoa.Size = new System.Drawing.Size(76, 26);
-            this.Btn_Xoa.TabIndex = 10;
-            this.Btn_Xoa.Text = "Xóa";
-            this.Btn_Xoa.UseVisualStyleBackColor = true;
-            this.Btn_Xoa.Click += new System.EventHandler(this.Btn_Xoa_Click);
-            // 
-            // Btn_ThemMoi
-            // 
-            this.Btn_ThemMoi.ForeColor = System.Drawing.Color.Black;
-            this.Btn_ThemMoi.Location = new System.Drawing.Point(12, 39);
-            this.Btn_ThemMoi.Name = "Btn_ThemMoi";
-            this.Btn_ThemMoi.Size = new System.Drawing.Size(76, 26);
-            this.Btn_ThemMoi.TabIndex = 21;
-            this.Btn_ThemMoi.Text = "Thêm Mới";
-            this.Btn_ThemMoi.UseVisualStyleBackColor = true;
-            this.Btn_ThemMoi.Click += new System.EventHandler(this.Btn_ThemMoi_Click);
             // 
             // Btn_CapNhat
             // 
@@ -335,13 +445,6 @@
             this.Lbl_NgaySinh.Text = "Tên sản phẩm";
             this.Lbl_NgaySinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Txt_TenSanPham
-            // 
-            this.Txt_TenSanPham.Location = new System.Drawing.Point(94, 23);
-            this.Txt_TenSanPham.Name = "Txt_TenSanPham";
-            this.Txt_TenSanPham.Size = new System.Drawing.Size(302, 20);
-            this.Txt_TenSanPham.TabIndex = 2;
-            // 
             // Txt_MaSanPham
             // 
             this.Txt_MaSanPham.Location = new System.Drawing.Point(94, 51);
@@ -361,86 +464,33 @@
             this.Lbl_SDT.Text = "MaSP";
             this.Lbl_SDT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Grb_ChiTietSanPham
+            // label10
             // 
-            this.Grb_ChiTietSanPham.Controls.Add(this.panel4);
-            this.Grb_ChiTietSanPham.Controls.Add(this.lsvSanPham);
-            this.Grb_ChiTietSanPham.Location = new System.Drawing.Point(650, 296);
-            this.Grb_ChiTietSanPham.Name = "Grb_ChiTietSanPham";
-            this.Grb_ChiTietSanPham.Size = new System.Drawing.Size(549, 321);
-            this.Grb_ChiTietSanPham.TabIndex = 30;
-            this.Grb_ChiTietSanPham.TabStop = false;
-            this.Grb_ChiTietSanPham.Text = "Thông Tin Chi  Tiết Sản Phẩm";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(808, 665);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 13);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "*Hôm nay: ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel4
+            // Lbl_NgaySanXuat
             // 
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.Txt_GiaBanCu);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.Btn_CapNhatGiaBan);
-            this.panel4.Controls.Add(this.TxtGiaBan);
-            this.panel4.Controls.Add(this.Txt_GiaBanMoi);
-            this.panel4.Location = new System.Drawing.Point(70, 267);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(472, 41);
-            this.panel4.TabIndex = 34;
+            this.Lbl_NgaySanXuat.AutoSize = true;
+            this.Lbl_NgaySanXuat.Location = new System.Drawing.Point(993, 624);
+            this.Lbl_NgaySanXuat.Name = "Lbl_NgaySanXuat";
+            this.Lbl_NgaySanXuat.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_NgaySanXuat.TabIndex = 61;
+            this.Lbl_NgaySanXuat.Visible = false;
             // 
-            // label7
+            // FLP_Product
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Giá bán cũ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Txt_GiaBanCu
-            // 
-            this.Txt_GiaBanCu.Location = new System.Drawing.Point(71, 9);
-            this.Txt_GiaBanCu.MaxLength = 10;
-            this.Txt_GiaBanCu.Name = "Txt_GiaBanCu";
-            this.Txt_GiaBanCu.ReadOnly = true;
-            this.Txt_GiaBanCu.Size = new System.Drawing.Size(102, 20);
-            this.Txt_GiaBanCu.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
-            this.label5.TabIndex = 34;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Btn_CapNhatGiaBan
-            // 
-            this.Btn_CapNhatGiaBan.ForeColor = System.Drawing.Color.Black;
-            this.Btn_CapNhatGiaBan.Location = new System.Drawing.Point(365, 6);
-            this.Btn_CapNhatGiaBan.Name = "Btn_CapNhatGiaBan";
-            this.Btn_CapNhatGiaBan.Size = new System.Drawing.Size(102, 26);
-            this.Btn_CapNhatGiaBan.TabIndex = 23;
-            this.Btn_CapNhatGiaBan.Text = "Cập Nhật Giá Bán";
-            this.Btn_CapNhatGiaBan.UseVisualStyleBackColor = true;
-            this.Btn_CapNhatGiaBan.Click += new System.EventHandler(this.Btn_CapNhatGiaBan_Click);
-            // 
-            // TxtGiaBan
-            // 
-            this.TxtGiaBan.AutoSize = true;
-            this.TxtGiaBan.Location = new System.Drawing.Point(185, 13);
-            this.TxtGiaBan.Name = "TxtGiaBan";
-            this.TxtGiaBan.Size = new System.Drawing.Size(63, 13);
-            this.TxtGiaBan.TabIndex = 32;
-            this.TxtGiaBan.Text = "Giá bán mới";
-            this.TxtGiaBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Txt_GiaBanMoi
-            // 
-            this.Txt_GiaBanMoi.Location = new System.Drawing.Point(250, 9);
-            this.Txt_GiaBanMoi.MaxLength = 10;
-            this.Txt_GiaBanMoi.Name = "Txt_GiaBanMoi";
-            this.Txt_GiaBanMoi.Size = new System.Drawing.Size(102, 20);
-            this.Txt_GiaBanMoi.TabIndex = 33;
+            this.FLP_Product.AutoScroll = true;
+            this.FLP_Product.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.FLP_Product.Location = new System.Drawing.Point(6, 68);
+            this.FLP_Product.Name = "FLP_Product";
+            this.FLP_Product.Size = new System.Drawing.Size(638, 644);
+            this.FLP_Product.TabIndex = 53;
             // 
             // lsvSanPham
             // 
@@ -502,112 +552,76 @@
             this.Lai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Lai.Width = 100;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(178, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 16);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "DANH SÁCH SẢN PHẨM HIỆN CÓ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(804, 682);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(398, 26);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "* Note: HSD (Ngày sủ dụn g còn lại) = Hạn sử dụng - Ngày hiện tại (đơn vị là ngày" +
-    ")\r\n             Trường hợp ngày là số âm => sản phẩm đã hết hạn.";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(804, 661);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 13);
-            this.label10.TabIndex = 34;
-            this.label10.Text = "*Hôm nay: ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Lbl_Ngay_Hien_Tai
-            // 
-            this.Lbl_Ngay_Hien_Tai.AutoSize = true;
-            this.Lbl_Ngay_Hien_Tai.Location = new System.Drawing.Point(725, 674);
-            this.Lbl_Ngay_Hien_Tai.Name = "Lbl_Ngay_Hien_Tai";
-            this.Lbl_Ngay_Hien_Tai.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_Ngay_Hien_Tai.TabIndex = 35;
-            this.Lbl_Ngay_Hien_Tai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Lbl_NgayHeThong
             // 
             this.Lbl_NgayHeThong.AutoSize = true;
-            this.Lbl_NgayHeThong.Location = new System.Drawing.Point(865, 661);
+            this.Lbl_NgayHeThong.Location = new System.Drawing.Point(869, 665);
             this.Lbl_NgayHeThong.Name = "Lbl_NgayHeThong";
             this.Lbl_NgayHeThong.Size = new System.Drawing.Size(67, 13);
-            this.Lbl_NgayHeThong.TabIndex = 36;
+            this.Lbl_NgayHeThong.TabIndex = 60;
             this.Lbl_NgayHeThong.Text = "dd/MM/yyyy";
             this.Lbl_NgayHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Lbl_NgaySanXuat
+            // Grb_ChiTietSanPham
             // 
-            this.Lbl_NgaySanXuat.AutoSize = true;
-            this.Lbl_NgaySanXuat.Location = new System.Drawing.Point(989, 620);
-            this.Lbl_NgaySanXuat.Name = "Lbl_NgaySanXuat";
-            this.Lbl_NgaySanXuat.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_NgaySanXuat.TabIndex = 37;
-            this.Lbl_NgaySanXuat.Visible = false;
+            this.Grb_ChiTietSanPham.Controls.Add(this.panel4);
+            this.Grb_ChiTietSanPham.Controls.Add(this.lsvSanPham);
+            this.Grb_ChiTietSanPham.Location = new System.Drawing.Point(654, 300);
+            this.Grb_ChiTietSanPham.Name = "Grb_ChiTietSanPham";
+            this.Grb_ChiTietSanPham.Size = new System.Drawing.Size(549, 321);
+            this.Grb_ChiTietSanPham.TabIndex = 55;
+            this.Grb_ChiTietSanPham.TabStop = false;
+            this.Grb_ChiTietSanPham.Text = "Thông Tin Chi  Tiết Sản Phẩm";
             // 
-            // Lbl_HanSuDung
+            // label8
             // 
-            this.Lbl_HanSuDung.AutoSize = true;
-            this.Lbl_HanSuDung.Location = new System.Drawing.Point(1031, 620);
-            this.Lbl_HanSuDung.Name = "Lbl_HanSuDung";
-            this.Lbl_HanSuDung.Size = new System.Drawing.Size(0, 13);
-            this.Lbl_HanSuDung.TabIndex = 38;
-            this.Lbl_HanSuDung.Visible = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label8.Location = new System.Drawing.Point(380, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(240, 13);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "(Chỉ hiển thị trang này: Không hiển thị trang order)";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // QuanLySanPham
+            // SuaQuaHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 719);
-            this.Controls.Add(this.Lbl_HanSuDung);
-            this.Controls.Add(this.Lbl_NgaySanXuat);
-            this.Controls.Add(this.Lbl_NgayHeThong);
+            this.ClientSize = new System.Drawing.Size(1223, 722);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.Lbl_Ngay_Hien_Tai);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Grb_ChiTietSanPham);
-            this.Controls.Add(this.Grb_ThongTinSanPham);
+            this.Controls.Add(this.Lbl_HanSuDung);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Grb_ThongTinSanPham);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Lbl_NgaySanXuat);
             this.Controls.Add(this.FLP_Product);
+            this.Controls.Add(this.Lbl_NgayHeThong);
+            this.Controls.Add(this.Grb_ChiTietSanPham);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "QuanLySanPham";
+            this.Name = "SuaQuaHan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QuanLySanPham";
-            this.Load += new System.EventHandler(this.QuanLySanPham_Load);
+            this.Text = "Sữa Quá Hạn";
+            this.Load += new System.EventHandler(this.SuaQuaHan_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.Grb_ThongTinSanPham.ResumeLayout(false);
             this.Grb_ThongTinSanPham.PerformLayout();
             this.Pal_.ResumeLayout(false);
             this.Grb_ChiTietSanPham.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,55 +629,56 @@
 
         #endregion
 
+        private System.Windows.Forms.Label Lbl_Ngay_Hien_Tai;
+        private System.Windows.Forms.Button Btn_Clear;
+        private System.Windows.Forms.Button Btn_Xoa;
+        private System.Windows.Forms.Button Btn_ThemMoi;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Txt_GiaBanCu;
+        private System.Windows.Forms.Label Lbl_HanSuDung;
+        private System.Windows.Forms.TextBox Txt_TenSanPham;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox Cmb_Filter;
         private System.Windows.Forms.Button Btn_Search;
         private System.Windows.Forms.TextBox Txt_Search;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Cmb_DanhMuc;
         private System.Windows.Forms.Label Lbl_DanhMuc;
-        private System.Windows.Forms.FlowLayoutPanel FLP_Product;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Btn_CapNhatGiaBan;
+        private System.Windows.Forms.Label TxtGiaBan;
+        private System.Windows.Forms.TextBox Txt_GiaBanMoi;
         private System.Windows.Forms.GroupBox Grb_ThongTinSanPham;
+        private System.Windows.Forms.Panel Pal_;
         private System.Windows.Forms.Button Btn_CapNhat;
-        private System.Windows.Forms.Button Btn_Xoa;
+        private System.Windows.Forms.TextBox Txt_MoTa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Txt_DaBan;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox Cmb_LoaiSanPham;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Lbl_NgaySinh;
-        private System.Windows.Forms.TextBox Txt_TenSanPham;
         private System.Windows.Forms.TextBox Txt_MaSanPham;
         private System.Windows.Forms.Label Lbl_SDT;
-        private System.Windows.Forms.TextBox Txt_DaBan;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Btn_ThemMoi;
-        private System.Windows.Forms.Button Btn_Clear;
-        private System.Windows.Forms.Panel Pal_;
-        private System.Windows.Forms.GroupBox Grb_ChiTietSanPham;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Lbl_NgaySanXuat;
+        private System.Windows.Forms.FlowLayoutPanel FLP_Product;
         private System.Windows.Forms.ListView lsvSanPham;
         private System.Windows.Forms.ColumnHeader NgaySanXuat;
         private System.Windows.Forms.ColumnHeader HanSuDung;
         private System.Windows.Forms.ColumnHeader HSD;
         private System.Windows.Forms.ColumnHeader HienCon;
         private System.Windows.Forms.ColumnHeader GiaNhap;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Txt_MoTa;
         private System.Windows.Forms.ColumnHeader GiaBan;
         private System.Windows.Forms.ColumnHeader Lai;
-        private System.Windows.Forms.Button Btn_CapNhatGiaBan;
-        private System.Windows.Forms.TextBox Txt_GiaBanMoi;
-        private System.Windows.Forms.Label TxtGiaBan;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Txt_GiaBanCu;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label Lbl_Ngay_Hien_Tai;
         private System.Windows.Forms.Label Lbl_NgayHeThong;
-        private System.Windows.Forms.Label Lbl_NgaySanXuat;
-        private System.Windows.Forms.Label Lbl_HanSuDung;
+        private System.Windows.Forms.GroupBox Grb_ChiTietSanPham;
+        private System.Windows.Forms.Label label8;
     }
 }

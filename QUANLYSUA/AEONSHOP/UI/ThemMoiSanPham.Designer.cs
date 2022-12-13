@@ -234,6 +234,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ThemMoiSanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Mới Sản Phẩm";
             this.Load += new System.EventHandler(this.ThemMoiSanPham_Load);
             this.Grb_ThongTinSanPham.ResumeLayout(false);

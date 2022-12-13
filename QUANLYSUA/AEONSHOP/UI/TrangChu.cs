@@ -937,6 +937,19 @@ namespace AEONSHOP.UI
             fQLHD.ShowDialog();
         }
         #endregion
+
         #endregion
+
+        private void SuaTonKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuaTonKho fSTK = new SuaTonKho();
+            fSTK.ShowDialog();
+        }
+
+        private void SuaHetHanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuaQuaHan fSQH = new SuaQuaHan();
+            fSQH.ShowDialog();
+        }
     }
 }

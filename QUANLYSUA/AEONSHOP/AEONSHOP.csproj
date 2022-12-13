@@ -90,6 +90,18 @@
     <Compile Include="UI\QuanLySanPham.Designer.cs">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\SuaQuaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SuaQuaHan.Designer.cs">
+      <DependentUpon>SuaQuaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SuaTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SuaTonKho.Designer.cs">
+      <DependentUpon>SuaTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ThemMoiSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QuanLySanPham.resx">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SuaQuaHan.resx">
+      <DependentUpon>SuaQuaHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SuaTonKho.resx">
+      <DependentUpon>SuaTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ThemMoiSanPham.resx">
       <DependentUpon>ThemMoiSanPham.cs</DependentUpon>
