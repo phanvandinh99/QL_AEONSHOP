@@ -22,9 +22,21 @@ namespace AEONSHOP.COMMON
             return sMaHoaDon;
 
         }
-        // Số hóa đơn tăng dần
-
         #endregion
+
+        #region Số Sản phẩm tăng dần
+        public string MaSanPham()
+        {
+            // Tìm sản phẩm cao nhất
+            string sMaSanPham = db.SanPham.Max(n => n.MaSanPham.Substring(2).Trim());
+            int iMaSanPham = int.Parse(sMaSanPham) + 1;
+            sMaSanPham = "SP000" + iMaSanPham;
+
+            return sMaSanPham;
+
+        }
+        #endregion
+
 
     }
 }

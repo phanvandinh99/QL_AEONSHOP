@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.Grb_ThongTinSanPham = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Txt_MaSanPham = new System.Windows.Forms.TextBox();
+            this.Lbl_SDT = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Txt_Link = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Pal_ = new System.Windows.Forms.Panel();
             this.Btn_Clear = new System.Windows.Forms.Button();
             this.Btn_ThemMoi = new System.Windows.Forms.Button();
@@ -38,16 +44,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Lbl_NgaySinh = new System.Windows.Forms.Label();
             this.Txt_TenSanPham = new System.Windows.Forms.TextBox();
-            this.Txt_MaSanPham = new System.Windows.Forms.TextBox();
-            this.Lbl_SDT = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Grb_ThongTinSanPham.SuspendLayout();
-            this.Pal_.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Pal_.SuspendLayout();
             this.SuspendLayout();
             // 
             // Grb_ThongTinSanPham
@@ -56,7 +56,7 @@
             this.Grb_ThongTinSanPham.Controls.Add(this.Txt_MaSanPham);
             this.Grb_ThongTinSanPham.Controls.Add(this.Lbl_SDT);
             this.Grb_ThongTinSanPham.Controls.Add(this.button1);
-            this.Grb_ThongTinSanPham.Controls.Add(this.textBox1);
+            this.Grb_ThongTinSanPham.Controls.Add(this.Txt_Link);
             this.Grb_ThongTinSanPham.Controls.Add(this.label2);
             this.Grb_ThongTinSanPham.Controls.Add(this.Pal_);
             this.Grb_ThongTinSanPham.Controls.Add(this.Txt_MoTa);
@@ -65,12 +65,70 @@
             this.Grb_ThongTinSanPham.Controls.Add(this.label6);
             this.Grb_ThongTinSanPham.Controls.Add(this.Lbl_NgaySinh);
             this.Grb_ThongTinSanPham.Controls.Add(this.Txt_TenSanPham);
-            this.Grb_ThongTinSanPham.Location = new System.Drawing.Point(8, 7);
+            this.Grb_ThongTinSanPham.Location = new System.Drawing.Point(7, 6);
             this.Grb_ThongTinSanPham.Name = "Grb_ThongTinSanPham";
-            this.Grb_ThongTinSanPham.Size = new System.Drawing.Size(408, 459);
+            this.Grb_ThongTinSanPham.Size = new System.Drawing.Size(408, 452);
             this.Grb_ThongTinSanPham.TabIndex = 30;
             this.Grb_ThongTinSanPham.TabStop = false;
             this.Grb_ThongTinSanPham.Text = "Thông Tin Sản Phẩm";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(94, 119);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Txt_MaSanPham
+            // 
+            this.Txt_MaSanPham.Location = new System.Drawing.Point(94, 19);
+            this.Txt_MaSanPham.MaxLength = 10;
+            this.Txt_MaSanPham.Name = "Txt_MaSanPham";
+            this.Txt_MaSanPham.ReadOnly = true;
+            this.Txt_MaSanPham.Size = new System.Drawing.Size(102, 20);
+            this.Txt_MaSanPham.TabIndex = 1;
+            // 
+            // Lbl_SDT
+            // 
+            this.Lbl_SDT.AutoSize = true;
+            this.Lbl_SDT.Location = new System.Drawing.Point(14, 23);
+            this.Lbl_SDT.Name = "Lbl_SDT";
+            this.Lbl_SDT.Size = new System.Drawing.Size(36, 13);
+            this.Lbl_SDT.TabIndex = 0;
+            this.Lbl_SDT.Text = "MaSP";
+            this.Lbl_SDT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(368, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 26);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Txt_Link
+            // 
+            this.Txt_Link.Location = new System.Drawing.Point(94, 223);
+            this.Txt_Link.Name = "Txt_Link";
+            this.Txt_Link.ReadOnly = true;
+            this.Txt_Link.Size = new System.Drawing.Size(268, 20);
+            this.Txt_Link.TabIndex = 34;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Hình ảnh";
             // 
             // Pal_
             // 
@@ -88,7 +146,7 @@
             this.Btn_Clear.Location = new System.Drawing.Point(88, 5);
             this.Btn_Clear.Name = "Btn_Clear";
             this.Btn_Clear.Size = new System.Drawing.Size(76, 26);
-            this.Btn_Clear.TabIndex = 22;
+            this.Btn_Clear.TabIndex = 6;
             this.Btn_Clear.Text = "Clear";
             this.Btn_Clear.UseVisualStyleBackColor = true;
             this.Btn_Clear.Click += new System.EventHandler(this.Btn_Clear_Click);
@@ -99,7 +157,7 @@
             this.Btn_ThemMoi.Location = new System.Drawing.Point(6, 5);
             this.Btn_ThemMoi.Name = "Btn_ThemMoi";
             this.Btn_ThemMoi.Size = new System.Drawing.Size(76, 26);
-            this.Btn_ThemMoi.TabIndex = 21;
+            this.Btn_ThemMoi.TabIndex = 5;
             this.Btn_ThemMoi.Text = "Thêm Mới";
             this.Btn_ThemMoi.UseVisualStyleBackColor = true;
             this.Btn_ThemMoi.Click += new System.EventHandler(this.Btn_ThemMoi_Click);
@@ -111,7 +169,7 @@
             this.Txt_MoTa.Name = "Txt_MoTa";
             this.Txt_MoTa.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.Txt_MoTa.Size = new System.Drawing.Size(302, 143);
-            this.Txt_MoTa.TabIndex = 32;
+            this.Txt_MoTa.TabIndex = 4;
             // 
             // label1
             // 
@@ -129,7 +187,7 @@
             this.Cmb_LoaiSanPham.Location = new System.Drawing.Point(94, 84);
             this.Cmb_LoaiSanPham.Name = "Cmb_LoaiSanPham";
             this.Cmb_LoaiSanPham.Size = new System.Drawing.Size(180, 21);
-            this.Cmb_LoaiSanPham.TabIndex = 6;
+            this.Cmb_LoaiSanPham.TabIndex = 2;
             // 
             // label6
             // 
@@ -155,35 +213,7 @@
             this.Txt_TenSanPham.Location = new System.Drawing.Point(94, 49);
             this.Txt_TenSanPham.Name = "Txt_TenSanPham";
             this.Txt_TenSanPham.Size = new System.Drawing.Size(302, 20);
-            this.Txt_TenSanPham.TabIndex = 2;
-            // 
-            // Txt_MaSanPham
-            // 
-            this.Txt_MaSanPham.Location = new System.Drawing.Point(94, 19);
-            this.Txt_MaSanPham.MaxLength = 10;
-            this.Txt_MaSanPham.Name = "Txt_MaSanPham";
-            this.Txt_MaSanPham.ReadOnly = true;
-            this.Txt_MaSanPham.Size = new System.Drawing.Size(102, 20);
-            this.Txt_MaSanPham.TabIndex = 1;
-            // 
-            // Lbl_SDT
-            // 
-            this.Lbl_SDT.AutoSize = true;
-            this.Lbl_SDT.Location = new System.Drawing.Point(14, 23);
-            this.Lbl_SDT.Name = "Lbl_SDT";
-            this.Lbl_SDT.Size = new System.Drawing.Size(36, 13);
-            this.Lbl_SDT.TabIndex = 0;
-            this.Lbl_SDT.Text = "MaSP";
-            this.Lbl_SDT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Hình ảnh";
+            this.Txt_TenSanPham.TabIndex = 1;
             // 
             // entityCommand1
             // 
@@ -193,48 +223,23 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(94, 223);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(268, 20);
-            this.textBox1.TabIndex = 34;
-            // 
-            // button1
-            // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(368, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 26);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 119);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
-            // 
             // ThemMoiSanPham
             // 
+            this.AcceptButton = this.Btn_ThemMoi;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 573);
+            this.ClientSize = new System.Drawing.Size(418, 463);
             this.Controls.Add(this.Grb_ThongTinSanPham);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ThemMoiSanPham";
             this.Text = "Thêm Mới Sản Phẩm";
+            this.Load += new System.EventHandler(this.ThemMoiSanPham_Load);
             this.Grb_ThongTinSanPham.ResumeLayout(false);
             this.Grb_ThongTinSanPham.PerformLayout();
-            this.Pal_.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Pal_.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -256,7 +261,7 @@
         private System.Windows.Forms.Label label2;
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Link;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

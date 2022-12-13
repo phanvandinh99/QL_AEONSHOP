@@ -28,10 +28,10 @@ C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEON
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.DangNhap.resources
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.QuanLyHoaDon.resources
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.QuanLySanPham.resources
+C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.ThemMoiSanPham.resources
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.TrangChu.resources
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.GenerateResource.cache
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.CoreCompileInputs.cache
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.csproj.CopyComplete
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.exe
 C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.pdb
-C:\Users\phanv\OneDrive\Máy tính\QL_AEONSHOP\QUANLYSUA\AEONSHOP\obj\Debug\AEONSHOP.UI.ThemMoiSanPham.resources

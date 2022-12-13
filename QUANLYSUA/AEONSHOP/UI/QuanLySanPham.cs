@@ -1,6 +1,7 @@
 ﻿using AEONSHOP.COMMON;
 using AEONSHOP.EF;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
@@ -207,7 +208,7 @@ namespace AEONSHOP.UI
             // khởi tạo giá trị
             string sMaSanPham = this.Txt_MaSanPham.Text;
 
-            if(string.IsNullOrEmpty(sMaSanPham))
+            if (string.IsNullOrEmpty(sMaSanPham))
             {
                 MessageBox.Show("Không có sản phẩm được chỉ định xóa", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -384,7 +385,6 @@ namespace AEONSHOP.UI
         {
             #region Khởi tạo giá trị
             string sMaSanPham = string.Empty;
-            double fLai = 0;
             #endregion
 
             #region Lấy mã sản phẩm tương ứng ở button click
@@ -409,13 +409,21 @@ namespace AEONSHOP.UI
             // Hiển thị sanh sách chi tiết sản phẩm
             var chitietsanpham = db.ChiTietSanPham.Where(n => n.MaSanPham == sMaSanPham).ToList();
 
+            this.HienThiListView(chitietsanpham);
+        }
+        #endregion
+
+        void HienThiListView(List<ChiTietSanPham> lstChiTiet)
+        {
+            double fLai = 0;
+
             // Xóa rỗng listview hóa đơn
             lsvSanPham.Items.Clear();
 
             // Trường hợp null
-            if (0 != chitietsanpham.Count())
+            if (0 != lstChiTiet.Count())
             {
-                foreach (var item in chitietsanpham)
+                foreach (var item in lstChiTiet)
                 {
                     // lấy tên sản phẩm
                     ListViewItem lsvItem = new ListViewItem(item.NgaySanXuat.ToString("dd/MM/yyyy"));
@@ -438,7 +446,6 @@ namespace AEONSHOP.UI
                 }
             }
         }
-        #endregion
 
         #region Clear textbox
         void XoaRongTextbox()
@@ -448,7 +455,7 @@ namespace AEONSHOP.UI
             this.Txt_MaSanPham.Clear();
             this.Txt_DaBan.Clear();
             this.Txt_MoTa.Clear();
-            this.Txt_GiaBanNew.Clear();
+            this.Txt_GiaBanMoi.Clear();
             this.Txt_Search.Clear();
             lsvSanPham.Items.Clear();
         }
@@ -461,6 +468,15 @@ namespace AEONSHOP.UI
         {
             // khởi tạo giá trị
             string sMaSanPham = this.Txt_MaSanPham.Text;
+            double fGiaMoi = float.Parse(this.Txt_GiaBanMoi.Text);
+            string sNgaySanXuat = Convert.ToDateTime(this.Lbl_NgaySanXuat.Text).ToString("ddMMyyyy");
+            string sHanSuDung = Convert.ToDateTime(this.Lbl_HanSuDung.Text).ToString("ddMMyyyy");
+
+            if (0 == fGiaMoi)
+            {
+                MessageBox.Show("Mời nhập giá bán mới", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             if (string.IsNullOrEmpty(sMaSanPham))
             {
@@ -468,8 +484,52 @@ namespace AEONSHOP.UI
                 return;
             }
 
+            var chiTietSanPham = db.ChiTietSanPham.FirstOrDefault(n => n.NgaySanXuat.ToString("ddMMyyyy").Equals(sNgaySanXuat)
+                                                                        & n.HanSuDung.ToString("ddMMyyyy").Equals(sHanSuDung)
+                                                                        & n.MaSanPham == sMaSanPham);
+
+            double kq = 0;
+            if (null != chiTietSanPham)
+            {
+                double fGiaCu = chiTietSanPham.DonGiaNhap;
+
+                if (fGiaMoi > fGiaCu)
+                {
+                    kq = fGiaMoi - fGiaCu;
+                    MessageBox.Show("Lãi: " + kq.ToString("#,###", cul.NumberFormat) + " vnđ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (fGiaMoi > fGiaCu)
+                {
+                    kq = fGiaCu - fGiaMoi;
+                    MessageBox.Show("Lỗ: " + kq.ToString("#,###", cul.NumberFormat) + " vnđ.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Cân bằng (Không lời, không lỗ)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                // thực hiện cập nhật
+                chiTietSanPham.DonGiaBan = fGiaMoi;
+                db.SaveChanges();
+
+                // Hiển thị sanh sách chi tiết sản phẩm
+                var chitietsanpham = db.ChiTietSanPham.Where(n => n.MaSanPham == sMaSanPham).ToList();
+
+                this.HienThiListView(chitietsanpham);
+                this.Txt_GiaBanCu.Clear();
+                this.Txt_GiaBanMoi.Clear();
+                MessageBox.Show("Cập nhật giá bán thành công)", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
         #endregion
+
+        private void lsvSanPham_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Lbl_NgaySanXuat.Text = lsvSanPham.SelectedItems[0].SubItems[0].Text;
+            this.Lbl_HanSuDung.Text = lsvSanPham.SelectedItems[0].SubItems[1].Text;
+            this.Txt_GiaBanCu.Text = lsvSanPham.SelectedItems[0].SubItems[5].Text;
+        }
+
     }
 }

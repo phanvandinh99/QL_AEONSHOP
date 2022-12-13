@@ -33,17 +33,20 @@
             this.Btn_Search = new System.Windows.Forms.Button();
             this.Txt_Search = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Cmb_DanhMuc = new System.Windows.Forms.ComboBox();
             this.Lbl_DanhMuc = new System.Windows.Forms.Label();
             this.FLP_Product = new System.Windows.Forms.FlowLayoutPanel();
             this.Grb_ThongTinSanPham = new System.Windows.Forms.GroupBox();
-            this.Txt_MoTa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Pal_ = new System.Windows.Forms.Panel();
             this.Btn_Clear = new System.Windows.Forms.Button();
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_ThemMoi = new System.Windows.Forms.Button();
             this.Btn_CapNhat = new System.Windows.Forms.Button();
+            this.Txt_MoTa = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Txt_DaBan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Cmb_LoaiSanPham = new System.Windows.Forms.ComboBox();
@@ -53,9 +56,13 @@
             this.Txt_MaSanPham = new System.Windows.Forms.TextBox();
             this.Lbl_SDT = new System.Windows.Forms.Label();
             this.Grb_ChiTietSanPham = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Txt_GiaBanCu = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Btn_CapNhatGiaBan = new System.Windows.Forms.Button();
-            this.Txt_GiaBanNew = new System.Windows.Forms.TextBox();
             this.TxtGiaBan = new System.Windows.Forms.Label();
+            this.Txt_GiaBanMoi = new System.Windows.Forms.TextBox();
             this.lsvSanPham = new System.Windows.Forms.ListView();
             this.NgaySanXuat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.HanSuDung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -65,23 +72,18 @@
             this.GiaBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Lai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Lbl_Ngay_Hien_Tai = new System.Windows.Forms.Label();
             this.Lbl_NgayHeThong = new System.Windows.Forms.Label();
+            this.Lbl_NgaySanXuat = new System.Windows.Forms.Label();
+            this.Lbl_HanSuDung = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.Grb_ThongTinSanPham.SuspendLayout();
             this.Pal_.SuspendLayout();
             this.Grb_ChiTietSanPham.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,6 +136,35 @@
             this.panel1.Size = new System.Drawing.Size(308, 38);
             this.panel1.TabIndex = 26;
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(-1, -1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(308, 38);
+            this.panel3.TabIndex = 27;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(76, 9);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 21);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Danh mục";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Cmb_DanhMuc
             // 
             this.Cmb_DanhMuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -182,24 +213,6 @@
             this.Grb_ThongTinSanPham.TabIndex = 29;
             this.Grb_ThongTinSanPham.TabStop = false;
             this.Grb_ThongTinSanPham.Text = "Thông Tin Sản Phẩm";
-            // 
-            // Txt_MoTa
-            // 
-            this.Txt_MoTa.Location = new System.Drawing.Point(94, 110);
-            this.Txt_MoTa.Multiline = true;
-            this.Txt_MoTa.Name = "Txt_MoTa";
-            this.Txt_MoTa.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Txt_MoTa.Size = new System.Drawing.Size(302, 143);
-            this.Txt_MoTa.TabIndex = 32;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Mô Tả";
             // 
             // Pal_
             // 
@@ -256,6 +269,24 @@
             this.Btn_CapNhat.Text = "Cập Nhật";
             this.Btn_CapNhat.UseVisualStyleBackColor = true;
             this.Btn_CapNhat.Click += new System.EventHandler(this.Btn_CapNhat_Click);
+            // 
+            // Txt_MoTa
+            // 
+            this.Txt_MoTa.Location = new System.Drawing.Point(94, 110);
+            this.Txt_MoTa.Multiline = true;
+            this.Txt_MoTa.Name = "Txt_MoTa";
+            this.Txt_MoTa.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.Txt_MoTa.Size = new System.Drawing.Size(302, 143);
+            this.Txt_MoTa.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Mô Tả";
             // 
             // Txt_DaBan
             // 
@@ -341,6 +372,47 @@
             this.Grb_ChiTietSanPham.TabStop = false;
             this.Grb_ChiTietSanPham.Text = "Thông Tin Chi  Tiết Sản Phẩm";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.Txt_GiaBanCu);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.Btn_CapNhatGiaBan);
+            this.panel4.Controls.Add(this.TxtGiaBan);
+            this.panel4.Controls.Add(this.Txt_GiaBanMoi);
+            this.panel4.Location = new System.Drawing.Point(70, 267);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(472, 41);
+            this.panel4.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Giá bán cũ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Txt_GiaBanCu
+            // 
+            this.Txt_GiaBanCu.Location = new System.Drawing.Point(71, 9);
+            this.Txt_GiaBanCu.MaxLength = 10;
+            this.Txt_GiaBanCu.Name = "Txt_GiaBanCu";
+            this.Txt_GiaBanCu.ReadOnly = true;
+            this.Txt_GiaBanCu.Size = new System.Drawing.Size(102, 20);
+            this.Txt_GiaBanCu.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 13);
+            this.label5.TabIndex = 34;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Btn_CapNhatGiaBan
             // 
             this.Btn_CapNhatGiaBan.ForeColor = System.Drawing.Color.Black;
@@ -352,14 +424,6 @@
             this.Btn_CapNhatGiaBan.UseVisualStyleBackColor = true;
             this.Btn_CapNhatGiaBan.Click += new System.EventHandler(this.Btn_CapNhatGiaBan_Click);
             // 
-            // Txt_GiaBanNew
-            // 
-            this.Txt_GiaBanNew.Location = new System.Drawing.Point(250, 9);
-            this.Txt_GiaBanNew.MaxLength = 10;
-            this.Txt_GiaBanNew.Name = "Txt_GiaBanNew";
-            this.Txt_GiaBanNew.Size = new System.Drawing.Size(102, 20);
-            this.Txt_GiaBanNew.TabIndex = 33;
-            // 
             // TxtGiaBan
             // 
             this.TxtGiaBan.AutoSize = true;
@@ -369,6 +433,14 @@
             this.TxtGiaBan.TabIndex = 32;
             this.TxtGiaBan.Text = "Giá bán mới";
             this.TxtGiaBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Txt_GiaBanMoi
+            // 
+            this.Txt_GiaBanMoi.Location = new System.Drawing.Point(250, 9);
+            this.Txt_GiaBanMoi.MaxLength = 10;
+            this.Txt_GiaBanMoi.Name = "Txt_GiaBanMoi";
+            this.Txt_GiaBanMoi.Size = new System.Drawing.Size(102, 20);
+            this.Txt_GiaBanMoi.TabIndex = 33;
             // 
             // lsvSanPham
             // 
@@ -383,12 +455,13 @@
             this.lsvSanPham.GridLines = true;
             this.lsvSanPham.HideSelection = false;
             this.lsvSanPham.Location = new System.Drawing.Point(7, 23);
-            this.lsvSanPham.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvSanPham.Margin = new System.Windows.Forms.Padding(4);
             this.lsvSanPham.Name = "lsvSanPham";
             this.lsvSanPham.Size = new System.Drawing.Size(535, 232);
             this.lsvSanPham.TabIndex = 31;
             this.lsvSanPham.UseCompatibleStateImageBehavior = false;
             this.lsvSanPham.View = System.Windows.Forms.View.Details;
+            this.lsvSanPham.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvSanPham_MouseClick);
             // 
             // NgaySanXuat
             // 
@@ -440,76 +513,6 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "DANH SÁCH SẢN PHẨM HIỆN CÓ";
             // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(-1, -1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(308, 38);
-            this.panel3.TabIndex = 27;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 21);
-            this.comboBox1.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Danh mục";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.Btn_CapNhatGiaBan);
-            this.panel4.Controls.Add(this.TxtGiaBan);
-            this.panel4.Controls.Add(this.Txt_GiaBanNew);
-            this.panel4.Location = new System.Drawing.Point(70, 267);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(472, 41);
-            this.panel4.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 13);
-            this.label5.TabIndex = 34;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Giá bán cũ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(71, 9);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 36;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -551,11 +554,31 @@
             this.Lbl_NgayHeThong.Text = "dd/MM/yyyy";
             this.Lbl_NgayHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Lbl_NgaySanXuat
+            // 
+            this.Lbl_NgaySanXuat.AutoSize = true;
+            this.Lbl_NgaySanXuat.Location = new System.Drawing.Point(989, 620);
+            this.Lbl_NgaySanXuat.Name = "Lbl_NgaySanXuat";
+            this.Lbl_NgaySanXuat.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_NgaySanXuat.TabIndex = 37;
+            this.Lbl_NgaySanXuat.Visible = false;
+            // 
+            // Lbl_HanSuDung
+            // 
+            this.Lbl_HanSuDung.AutoSize = true;
+            this.Lbl_HanSuDung.Location = new System.Drawing.Point(1031, 620);
+            this.Lbl_HanSuDung.Name = "Lbl_HanSuDung";
+            this.Lbl_HanSuDung.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_HanSuDung.TabIndex = 38;
+            this.Lbl_HanSuDung.Visible = false;
+            // 
             // QuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 719);
+            this.Controls.Add(this.Lbl_HanSuDung);
+            this.Controls.Add(this.Lbl_NgaySanXuat);
             this.Controls.Add(this.Lbl_NgayHeThong);
             this.Controls.Add(this.Lbl_Ngay_Hien_Tai);
             this.Controls.Add(this.label10);
@@ -566,6 +589,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.FLP_Product);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuanLySanPham";
             this.Text = "QuanLySanPham";
             this.Load += new System.EventHandler(this.QuanLySanPham_Load);
@@ -573,12 +599,12 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.Grb_ThongTinSanPham.ResumeLayout(false);
             this.Grb_ThongTinSanPham.PerformLayout();
             this.Pal_.ResumeLayout(false);
             this.Grb_ChiTietSanPham.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -622,7 +648,7 @@
         private System.Windows.Forms.ColumnHeader GiaBan;
         private System.Windows.Forms.ColumnHeader Lai;
         private System.Windows.Forms.Button Btn_CapNhatGiaBan;
-        private System.Windows.Forms.TextBox Txt_GiaBanNew;
+        private System.Windows.Forms.TextBox Txt_GiaBanMoi;
         private System.Windows.Forms.Label TxtGiaBan;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
@@ -631,10 +657,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_GiaBanCu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label Lbl_Ngay_Hien_Tai;
         private System.Windows.Forms.Label Lbl_NgayHeThong;
+        private System.Windows.Forms.Label Lbl_NgaySanXuat;
+        private System.Windows.Forms.Label Lbl_HanSuDung;
     }
 }
