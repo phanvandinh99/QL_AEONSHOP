@@ -93,7 +93,7 @@ namespace AEONSHOP.UI
         private void ThemMoiSanPham_Load(object sender, EventArgs e)
         {
             Common cm = new Common();
-            this.Txt_MaSanPham.Text = cm.MaHoaDon();
+            this.Txt_MaSanPham.Text = cm.MaSanPham();
 
             // Hiển thị danh mục (loại sản phẩm)
             var lst_LoaiSanPham = db.LoaiSanPham.Where(n=>n.MaLoaiSanPham != "ALL").ToList();

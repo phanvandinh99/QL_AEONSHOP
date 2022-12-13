@@ -181,7 +181,6 @@
             this.Txt_Password.Name = "Txt_Password";
             this.Txt_Password.Size = new System.Drawing.Size(202, 26);
             this.Txt_Password.TabIndex = 19;
-            this.Txt_Password.Text = "abc123";
             this.Txt_Password.UseSystemPasswordChar = true;
             // 
             // Txt_UserName
@@ -191,7 +190,6 @@
             this.Txt_UserName.Name = "Txt_UserName";
             this.Txt_UserName.Size = new System.Drawing.Size(202, 26);
             this.Txt_UserName.TabIndex = 18;
-            this.Txt_UserName.Text = "Admin";
             // 
             // DangNhap
             // 

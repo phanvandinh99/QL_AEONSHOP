@@ -78,6 +78,12 @@
     <Compile Include="UI\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\NhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NhapKho.Designer.cs">
+      <DependentUpon>NhapKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\QuanLyHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     </Compile>
     <Compile Include="UI\QuanLySanPham.Designer.cs">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SuaBanChay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SuaBanChay.Designer.cs">
+      <DependentUpon>SuaBanChay.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SuaQuaHan.cs">
       <SubType>Form</SubType>
@@ -127,11 +139,17 @@
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\NhapKho.resx">
+      <DependentUpon>NhapKho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\QuanLyHoaDon.resx">
       <DependentUpon>QuanLyHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\QuanLySanPham.resx">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SuaBanChay.resx">
+      <DependentUpon>SuaBanChay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SuaQuaHan.resx">
       <DependentUpon>SuaQuaHan.cs</DependentUpon>

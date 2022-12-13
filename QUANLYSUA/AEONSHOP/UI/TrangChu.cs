@@ -951,5 +951,17 @@ namespace AEONSHOP.UI
             SuaQuaHan fSQH = new SuaQuaHan();
             fSQH.ShowDialog();
         }
+
+        private void sữaBánChạyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuaBanChay fSBC = new SuaBanChay();
+            fSBC.ShowDialog();
+        }
+
+        private void nhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhapKho fNK = new NhapKho();
+            fNK.ShowDialog();
+        }
     }
 }

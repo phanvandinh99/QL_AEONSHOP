@@ -44,8 +44,8 @@ namespace AEONSHOP.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDon { get; set; }
 
-        public virtual ThuNhap ThuNhap { get; set; }
-
         public virtual TinhTrangSucKhoe TinhTrangSucKhoe { get; set; }
+
+        public virtual ThuNhap ThuNhap { get; set; }
     }
 }

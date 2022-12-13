@@ -262,45 +262,38 @@ go
 CREATE TABLE NhapKho
 (
 	MaNhapKho varchar(10) primary key,
-	NgayNhapKho datetime default(getdate()),
-	TongTien float,
+	NgayNhapKho datetime not null,
+	TongTien float not null,
 	TaiKhoanNV varchar(50),
 
 	foreign key(TaiKhoanNV) references Nhanvien(TaiKhoanNV),
 )
 go
-insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0001', default, 200000, 'Admin');
-insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0002', default, 300000, 'Admin');
-insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0003', default, 400000, 'Admin');
-insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0004', default, 500000, 'Admin');
-insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0005', default, 600000, 'Admin');
+insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0001', '02/02/2022', 200000, 'Admin');
+insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0002', '02/03/2022', 300000, 'Admin');
+insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0003', '02/04/2022', 400000, 'Admin');
+insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0004', '02/05/2022', 500000, 'Admin');
+insert into NhapKho (MaNhapKho, NgayNhapKho, TongTien, TaiKhoanNV) values ('NK0005', '02/06/2022', 600000, 'Admin');
 go
 CREATE TABLE ChiTietNhapKho
 (
-	MaHoaDon varchar(10),
+	MaNhapKho varchar(10),
 	MaSanPham varchar(10),
-	primary key (MaHoaDon, MaSanPham),
-	SoLuongNhap int default(1),
-	DonGiaNhap float null,
-	ThanhTien float null,
+	primary key (MaNhapKho, MaSanPham),
+	SoLuongNhap int default(1) not null,
+	DonGiaNhap float not null,
+	ThanhTien float not null,
 
-	foreign key(MaHoaDon) references HoaDon(MaHoaDon),
+	foreign key(MaNhapKho) references NhapKho(MaNhapKho),
 	foreign key(MaSanPham) references SanPham(MaSanPham),
 )
 go
-insert into ChiTietNhapKho (MaHoaDon, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('HD0001', 'SP0001', 10, 200000, 2000000);
-insert into ChiTietNhapKho (MaHoaDon, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('HD0002', 'SP0002', 10, 300000, 3000000);
-insert into ChiTietNhapKho (MaHoaDon, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('HD0003', 'SP0003', 10, 400000, 4000000);
-insert into ChiTietNhapKho (MaHoaDon, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('HD0004', 'SP0004', 10, 500000, 5000000);
-insert into ChiTietNhapKho (MaHoaDon, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('HD0005', 'SP0005', 10, 600000, 6000000);
+-- insert into ChiTietNhapKho (MaNhapKho, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('NK0001', 'SP0001', 10, 200000, 2000000);
+-- insert into ChiTietNhapKho (MaNhapKho, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('NK0002', 'SP0002', 10, 300000, 3000000);
+-- insert into ChiTietNhapKho (MaNhapKho, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('NK0003', 'SP0003', 10, 400000, 4000000);
+-- insert into ChiTietNhapKho (MaNhapKho, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('NK0004', 'SP0004', 10, 500000, 5000000);
+-- insert into ChiTietNhapKho (MaNhapKho, MaSanPham, SoLuongNhap, DonGiaNhap, ThanhTien) values ('NK0005', 'SP0005', 10, 600000, 6000000);
 go
 
 
 -- =================================================== STORE PROCEDURE =================================================== --
-
--- ========== ĐĂNG NHẬP HỆ THỐNG ========== --
-
-
-
-
-

@@ -12,20 +12,20 @@ namespace AEONSHOP.EF
         [Key]
         [Column(Order = 0)]
         [StringLength(10)]
-        public string MaHoaDon { get; set; }
+        public string MaNhapKho { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [StringLength(10)]
         public string MaSanPham { get; set; }
 
-        public int? SoLuongNhap { get; set; }
+        public int SoLuongNhap { get; set; }
 
-        public double? DonGiaNhap { get; set; }
+        public double DonGiaNhap { get; set; }
 
-        public double? ThanhTien { get; set; }
+        public double ThanhTien { get; set; }
 
-        public virtual HoaDon HoaDon { get; set; }
+        public virtual NhapKho NhapKho { get; set; }
 
         public virtual SanPham SanPham { get; set; }
     }

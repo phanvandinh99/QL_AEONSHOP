@@ -39,7 +39,6 @@
             this.nhậpKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sảnPhẩmBánChạyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FLP_Product = new System.Windows.Forms.FlowLayoutPanel();
             this.Grb_ThongTinKhachHang = new System.Windows.Forms.GroupBox();
             this.Btn_CapNhat = new System.Windows.Forms.Button();
@@ -93,6 +92,7 @@
             this.Cmb_Filter = new System.Windows.Forms.ComboBox();
             this.Btn_Search = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.sữaBánChạyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.Grb_ThongTinKhachHang.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -135,6 +135,7 @@
             // quảnLýĐơnHàngToolStripMenuItem
             // 
             this.quảnLýĐơnHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sữaBánChạyToolStripMenuItem,
             this.SuaHetHanToolStripMenuItem,
             this.SuaTonKhoToolStripMenuItem,
             this.SanPhamToolStripMenuItem});
@@ -176,12 +177,12 @@
             this.nhậpKhoToolStripMenuItem.Name = "nhậpKhoToolStripMenuItem";
             this.nhậpKhoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nhậpKhoToolStripMenuItem.Text = "Nhập Kho";
+            this.nhậpKhoToolStripMenuItem.Click += new System.EventHandler(this.nhậpKhoToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.doanhThuToolStripMenuItem,
-            this.sảnPhẩmBánChạyToolStripMenuItem});
+            this.doanhThuToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống Kê";
@@ -191,12 +192,6 @@
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
             this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.doanhThuToolStripMenuItem.Text = "Doanh Thu";
-            // 
-            // sảnPhẩmBánChạyToolStripMenuItem
-            // 
-            this.sảnPhẩmBánChạyToolStripMenuItem.Name = "sảnPhẩmBánChạyToolStripMenuItem";
-            this.sảnPhẩmBánChạyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sảnPhẩmBánChạyToolStripMenuItem.Text = "Sản Phẩm Bán Chạy";
             // 
             // FLP_Product
             // 
@@ -726,6 +721,13 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // sữaBánChạyToolStripMenuItem
+            // 
+            this.sữaBánChạyToolStripMenuItem.Name = "sữaBánChạyToolStripMenuItem";
+            this.sữaBánChạyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sữaBánChạyToolStripMenuItem.Text = "Sữa Bán Chạy";
+            this.sữaBánChạyToolStripMenuItem.Click += new System.EventHandler(this.sữaBánChạyToolStripMenuItem_Click);
+            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,9 +831,9 @@
         private System.Windows.Forms.ToolStripMenuItem nhậpKhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doanhThuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sảnPhẩmBánChạyToolStripMenuItem;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem QuanLyHoaDonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sữaBánChạyToolStripMenuItem;
     }
 }

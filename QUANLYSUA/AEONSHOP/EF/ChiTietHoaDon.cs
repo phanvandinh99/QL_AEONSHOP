@@ -19,13 +19,13 @@ namespace AEONSHOP.EF
         [StringLength(10)]
         public string MaSanPham { get; set; }
 
-        public int SoLuongMua { get; set; }
-
         public int HanSuDung { get; set; }
 
-        public double ThanhTien { get; set; }
+        public int SoLuongMua { get; set; }
 
         public double GiaBan { get; set; }
+
+        public double ThanhTien { get; set; }
 
         public virtual HoaDon HoaDon { get; set; }
 
