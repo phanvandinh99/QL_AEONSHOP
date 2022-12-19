@@ -787,6 +787,7 @@ namespace AEONSHOP.UI
             var TongTien = db.ChiTietHoaDon.Where(n => n.MaHoaDon == sMaHoaDon).Sum(n => n.ThanhTien);
             var HoaDon = db.HoaDon.SingleOrDefault(n => n.MaHoaDon == sMaHoaDon & n.TrangThai == 0);
             HoaDon.TongTien = TongTien;
+            db.SaveChanges();
 
             // Hiển thị lên listview hóa đơn
             this.HienThiHoaDon(this.Txt_SDT.Text.Trim());
